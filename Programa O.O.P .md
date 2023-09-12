@@ -52,7 +52,7 @@ Programa 2
                     tot_digitos = valor.Length;
                     esnumero = int.TryParse(valor, out num);
                 }
-                while (tot_digitos == 0 || tot_digitos >= 4 || !esnumero);
+                while (tot_digitos == 0 || tot_digitos != 3 || !esnumero);
     
                 num = int.Parse(valor);
                 cen = num / 100;
