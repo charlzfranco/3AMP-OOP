@@ -327,3 +327,33 @@ Programa 7
             Console.ReadKey();
         }
     }
+
+Programa 8
+
+    using System;
+    using System.Linq;
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Ingrese cualquier caracter: ");
+            char caracter = Console.ReadKey().KeyChar;
+    
+            if (char.IsDigit(caracter))
+            {
+                Console.WriteLine("\nEs una cifra numérica.");
+            }
+            else if ("AEIOUaeiou".Contains(caracter))
+            {
+                Console.WriteLine("\nEs una vocal.");
+            }
+            else if (char.IsLetter(caracter))
+            {
+                Console.WriteLine("\nEs una consonante.");
+            }
+            else
+            {
+                Console.WriteLine("\nCaracter no valido");
+            }
+        }
+    }
