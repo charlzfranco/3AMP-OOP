@@ -236,3 +236,16 @@ Programa 5
         }
     }
 
+Programa 6
+
+        using System;
+        namespace ejer02_prog03_u1
+        {
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    Console.WriteLine(String.Format("Hoy es {0:dddd}", DateTime.Now));
+                }
+            }
+        }
