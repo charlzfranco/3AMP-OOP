@@ -249,3 +249,81 @@ Programa 6
                 }
             }
         }
+
+Programa 7
+
+    using System;
+    
+    class Program
+    {
+        static void Main()
+        {
+            string nombre;
+            string grupo;
+            string materia;
+            double cal1, cal2, cal3;
+            double promedio;
+    
+            Console.Write("Nombre del alumno: ");
+            nombre = Console.ReadLine();
+    
+            Console.Write("Grado y grupo: ");
+            grupo = Console.ReadLine();
+    
+            Console.Write("Materia: ");
+            materia = Console.ReadLine();
+    
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Write("Calificación de la Unidad 1: ");
+            cal1 = double.Parse(Console.ReadLine());
+    
+            Console.Write("Calificación de la Unidad 2: ");
+            cal2 = double.Parse(Console.ReadLine());
+    
+            Console.Write("Calificación de la Unidad 3: ");
+            cal3 = double.Parse(Console.ReadLine());
+    
+            promedio = (cal1 + cal2 + cal3) / 3.0;
+    
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+    
+            Console.Clear();
+    
+            Console.SetCursorPosition(0, 0);
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Nombre del alumno: " + nombre);
+    
+            Console.SetCursorPosition(0, 1);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Grado y grupo: " + grupo);
+    
+            Console.SetCursorPosition(0, 2);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Materia: " + materia);
+    
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
+    
+            Console.SetCursorPosition(0, 4);
+            Console.WriteLine("Calificación de la unidad 1: " + cal1);
+    
+            Console.SetCursorPosition(0, 5);
+            Console.WriteLine("Calificación de la unidad 2: " + cal2);
+    
+            Console.SetCursorPosition(0, 6);
+            Console.WriteLine("Calificación de la unidad 3: " + cal3);
+    
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+    
+            Console.SetCursorPosition(0, 8);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("Promedio de calificaciones: " + promedio); 
+    
+            Console.ForegroundColor = ConsoleColor.White;
+    
+            Console.ReadKey();
+        }
+    }
