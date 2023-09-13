@@ -357,3 +357,92 @@ Programa 8
             }
         }
     }
+
+Programa 9
+
+    using System;
+    
+    namespace Ejer02_prog09_U1
+    {
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                string NOM;
+                byte K;
+    
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.Write("DIGITE SU NOMBRE (Que sea mayor a 7 digitos) : ");
+                NOM = Console.ReadLine();
+    
+                Console.WriteLine("LONGITUD : " + NOM.Length);
+                if (NOM.Length > 7)
+                {
+    
+                    Console.WriteLine("ESTA DENTRO : " + NOM.Contains("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"));
+    
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("\nREEMPLAZO VOCAL A: " + NOM.Replace("A", "X"));
+                    Console.WriteLine("REEMPLAZO VOCAL a: " + NOM.Replace("a", "x"));
+                    Console.WriteLine("REEMPLAZO VOCAL E: " + NOM.Replace("E", "X"));
+                    Console.WriteLine("REEMPLAZO VOCAL e: " + NOM.Replace("e", "x"));
+                    Console.WriteLine("REEMPLAZO VOCAL I: " + NOM.Replace("I", "X"));
+                    Console.WriteLine("REEMPLAZO VOCAL i: " + NOM.Replace("i", "x"));
+                    Console.WriteLine("REEMPLAZO VOCAL O: " + NOM.Replace("O", "X"));
+                    Console.WriteLine("REEMPLAZO VOCAL o: " + NOM.Replace("o", "x"));
+                    Console.WriteLine("REEMPLAZO VOCAL U: " + NOM.Replace("U", "X"));
+                    Console.WriteLine("REEMPLAZO VOCAL u: " + NOM.Replace("u", "x"));
+    
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("\nEN MINUSCULAS : " + NOM.ToLower());
+                    Console.WriteLine("EN MAYÚSCULAS : " + NOM.ToUpper());
+    
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("\nREMOVER 4 LETRAS : " + NOM.Remove(3, 4));
+                    Console.WriteLine("EXTRAER 4 LETRAS : " + NOM.Substring(3, 4));
+    
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nIZQUIERDA 4 LETRAS : " + fIzquierda(NOM, 4));
+                    Console.WriteLine("DERECHA 4 LETRAS : " + fDerecha(NOM, 4));
+    
+    
+                    Console.Write("Pulse Enter:");
+                    Console.ReadLine();
+    
+                    Console.WriteLine();
+                    Console.WriteLine("DESDE LA IZQUIERDA");
+                    for (K = 1; K <= NOM.Length; K++)
+                    {
+                        Console.WriteLine(fIzquierda(NOM, K));
+                    }
+    
+                    Console.WriteLine();
+                    Console.WriteLine("DESDE LA DERECHA");
+                    for (K = 1; K <= NOM.Length; K++)
+                    {
+                        Console.WriteLine(fDerecha(NOM, K));
+                    }
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("No cumple con los requisitos");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+            }
+    
+            //Funciones 
+            public static string fIzquierda(string vCadena, int tam)
+            {
+                string result = vCadena.Substring(0, tam);
+                return result;
+            }
+    
+            public static string fDerecha(string vCadena, int tam)
+            {
+                int valor = vCadena.Length - tam;
+                string result = vCadena.Substring(valor, tam);
+                return result;
+            }
+        }
+    }
