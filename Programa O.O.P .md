@@ -197,3 +197,42 @@ Programa 4
             }
         }
 
+Programa 5
+
+    using System;
+    
+    namespace Ejer02_prog05_U1
+    {
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                int dig, mon10, mon5, bille50, bille100;
+                string valor;
+    
+                Console.WriteLine("Ingrese la cantidad de dinero a separar: ");
+                valor = Console.ReadLine();
+                
+                dig = int.Parse(valor);
+    
+                bille100 = dig / 100;
+                dig %= 100;
+    
+                bille50 = dig / 50;
+                dig %= 50;
+    
+                mon10 = dig / 10;
+                dig %= 10;
+    
+                mon5 = dig / 5;
+                dig %= 5;
+    
+                Console.WriteLine("Billetes de 100: " + bille100);
+                Console.WriteLine("Billetes de 50: " + bille50);
+                Console.WriteLine("Monedas de 10: " + mon10);
+                Console.WriteLine("Monedas de 5: " + mon5);
+    
+            }
+        }
+    }
+
