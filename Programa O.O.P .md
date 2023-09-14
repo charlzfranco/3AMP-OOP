@@ -446,3 +446,118 @@ Programa 9
             }
         }
     }
+
+Programa 10 
+
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    
+    namespace Ejer02_prog10_U1
+    {
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                double valor1, valor2, valor3, mul, res;
+                string linea;
+    
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("Ingresa el valor 1: ");
+                linea = (Console.ReadLine());
+                valor1 = double.Parse(linea);
+                mul = 0;
+                while (mul<10)
+                {
+                    mul = mul + 1;
+                    res = valor1 * mul;
+                    Console.WriteLine($"{valor1} x {mul} = {res} ");
+                    continue;
+                }
+    
+                Console.ForegroundColor= ConsoleColor.Red;
+                Console.WriteLine("\nIngresa el valor 2: ");
+                linea = (Console.ReadLine());
+                valor2 = double.Parse(linea);
+                mul = 0;
+                for (mul = 1; mul <= 10; mul++)
+                {
+                    res = valor2 * mul;
+                    Console.WriteLine($"{valor2} x {mul} = {res} ");
+                }
+    
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\nIngresa el valor 3: ");
+                linea = (Console.ReadLine());
+                valor3 = double.Parse(linea);
+                while (true)
+                { 
+                    mul = 0;
+                    Console.WriteLine("\nMenu de Opciones: ");
+                    Console.WriteLine("1) Imprimir tabla");
+                    Console.WriteLine("0) Cerrar Menu");
+                    Console.WriteLine("Seleccione una opcion");
+                    string opcion = Console.ReadLine();
+    
+                    if (opcion == "0")
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break;
+                    }
+    
+                    switch (opcion)
+                    {
+                        case "1":
+                            mul = mul + 1;
+                            res = valor3 * mul;
+                            Console.WriteLine($"{valor3} x {mul} = {res} ");
+    
+                            mul = mul + 1;
+                            res = valor3 * mul;
+                            Console.WriteLine($"{valor3} x {mul} = {res} ");
+    
+                            mul = mul + 1;
+                            res = valor3 * mul;
+                            Console.WriteLine($"{valor3} x {mul} = {res} ");
+    
+                            mul = mul + 1;
+                            res = valor3 * mul;
+                            Console.WriteLine($"{valor3} x {mul} = {res} ");
+    
+                            mul = mul + 1;
+                            res = valor3 * mul;
+                            Console.WriteLine($"{valor3} x {mul} = {res} ");
+    
+                            mul = mul + 1;
+                            res = valor3 * mul;
+                            Console.WriteLine($"{valor3} x {mul} = {res} ");
+    
+                            mul = mul + 1;
+                            res = valor3 * mul;
+                            Console.WriteLine($"{valor3} x {mul} = {res} ");
+    
+                            mul = mul + 1;
+                            res = valor3 * mul;
+                            Console.WriteLine($"{valor3} x {mul} = {res} ");
+    
+                            mul = mul + 1;
+                            res = valor3 * mul;
+                            Console.WriteLine($"{valor3} x {mul} = {res} ");
+    
+                            mul = mul + 1;
+                            res = valor3 * mul;
+                            Console.WriteLine($"{valor3} x {mul} = {res} ");
+    
+                            break;
+    
+                        default:
+                            Console.WriteLine("Opción no válida. Por favor, elija una opción válida.");
+                            continue;
+                            
+                    }
+                }
+            }
+        }
+    }
